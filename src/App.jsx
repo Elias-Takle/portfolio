@@ -1,6 +1,6 @@
 import { Navbar, Footer, Progress } from './components/Layout.jsx';
 import { useReveal } from './hooks.js';
-import { Hero, Marquee, About, Skills, Projects, Services, Process } from './components/Sections.jsx';
+import { Hero, Marquee, About, Skills, Experience, Projects, Services, Process } from './components/Sections.jsx';
 import { Contact } from './components/Contact.jsx';
 
 export default function App() {
@@ -15,6 +15,7 @@ export default function App() {
         <Marquee />
         <About />
         <Skills />
+        <Experience />
         <Projects />
         <Services />
         <Process />

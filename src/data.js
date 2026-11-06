@@ -1,25 +1,26 @@
 // ALL personal content lives here. Anything in [BRACKETS] is a placeholder: replace it with real info.
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaJs, FaReact, FaNodeJs, FaPython, FaGitAlt, FaGithub, FaDatabase } from 'react-icons/fa';
-import { SiJquery, SiExpress, SiDjango, SiMysql } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaJs, FaReact, FaNodeJs, FaPython, FaGitAlt, FaGithub, FaDatabase, FaDesktop } from 'react-icons/fa';
+import { SiJquery, SiExpress, SiDjango, SiMysql, SiTypescript, SiNextdotjs, SiTailwindcss, SiDocker } from 'react-icons/si';
 
 export const profile = {
   name: 'Elias Takle',
   title: 'Full-Stack Developer',
+  location: 'Addis Ababa, Ethiopia',
   email: 'takleelias07@gmail.com',
   github: 'https://github.com/Elias-Takle',
   linkedin: 'https://www.linkedin.com/in/elias-takle-522b31337/',
-  cv: `${import.meta.env.BASE_URL}cv/cv.pdf`, // replace public/cv/cv.pdf with your CV
+  cv: `${import.meta.env.BASE_URL}cv/Elias_Takle_CV.pdf`,
   photo: `${import.meta.env.BASE_URL}images/elias.jpg`,
 };
 
-export const nav = [['home', 'Home'], ['about', 'About'], ['skills', 'Skills'], ['projects', 'Projects'], ['services', 'Services'], ['contact', 'Contact']];
+export const nav = [['home', 'Home'], ['about', 'About'], ['skills', 'Skills'], ['experience', 'Experience'], ['projects', 'Projects'], ['services', 'Services'], ['contact', 'Contact']];
 export const SECTION_IDS = [...nav.map(([id]) => id), 'process'];
 
 export const skills = [
-  { title: 'Frontend', items: [['HTML5', FaHtml5], ['CSS3', FaCss3Alt], ['Bootstrap', FaBootstrap], ['JavaScript', FaJs], ['jQuery', SiJquery], ['React', FaReact]] },
+  { title: 'Frontend', items: [['HTML5', FaHtml5], ['CSS3', FaCss3Alt], ['Bootstrap', FaBootstrap], ['Tailwind CSS', SiTailwindcss], ['JavaScript', FaJs], ['TypeScript', SiTypescript], ['jQuery', SiJquery], ['React', FaReact], ['Next.js', SiNextdotjs]] },
   { title: 'Backend', items: [['Node.js', FaNodeJs], ['Express', SiExpress]], also: [['Python', FaPython], ['Django', SiDjango]] },
   { title: 'Database', items: [['MySQL', SiMysql], ['SQL', FaDatabase]] },
-  { title: 'Tools', items: [['Git', FaGitAlt], ['GitHub', FaGithub]] },
+  { title: 'Tools & Desktop', items: [['Git', FaGitAlt], ['GitHub', FaGithub], ['Docker', SiDocker], ['Tauri', FaDesktop]] },
 ];
 
 const img = (f) => `${import.meta.env.BASE_URL}images/${f}`;
@@ -79,3 +80,24 @@ export const process = [
   ['Test and debug', 'Check behavior across devices and edge cases, then fix what breaks.'],
   ['Deploy and maintain', 'Ship to production and keep improving it over time.'],
 ];
+
+export const experience = [
+  {
+    title: 'Full Stack Web Development Trainee',
+    org: 'Evangadi Networks',
+    points: ['Completed an intensive full-stack program covering front-end, back-end and database development.', 'Built web applications with React, Node.js, Express and SQL, including authentication and REST APIs.', 'Worked in Git and GitHub workflows and delivered projects from idea to working product.'],
+  },
+  {
+    title: 'BSc in Mechanical Engineering',
+    org: 'Addis Ababa University, College of Technology and Built Environment',
+    points: ['Self-taught developer who writes Python fluently, strong in data structures and object-oriented programming.', 'Solved 10+ LeetCode problems.'],
+  },
+];
+
+export const certifications = [
+  ['Certificate of Honor', 'GCI World, Matsuo-Iwasawa Laboratory, Graduate School of Engineering, The University of Tokyo', 'Honors for excellence in the final assessment of a data science course on fundamental theories and implementation.'],
+  ['Certificate of Completion', 'GCI World, Matsuo-Iwasawa Laboratory, Graduate School of Engineering, The University of Tokyo', 'Completed the data science course and passed its final assessment.'],
+  ['AI & Career Empowerment Program', 'University of Maryland, Robert H. Smith School of Business (non-credit)', 'Applied AI in business and professional development.'],
+];
+
+export const learning = ['Agentic AI (ReAct, plan-and-execute, tool calling)', 'Multi-agent orchestration (LangGraph, CrewAI)', 'RAG and vector databases (Pinecone)', 'Fine-tuning vs LoRA/QLoRA', 'MCP'];

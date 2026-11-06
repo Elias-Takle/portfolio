@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { profile, skills, projects, services, process } from '../data.js';
+import { profile, skills, experience, certifications, learning, projects, services, process } from '../data.js';
 import { L, Section, Tag } from './ui.jsx';
 
 export function Hero() {
@@ -7,13 +7,13 @@ export function Hero() {
     <section id="home" className="hero" aria-labelledby="hero-h">
       <div className="wrap hero-in">
         <div>
-          <p className="role">{profile.title}</p>
+          <p className="role">{profile.title} · {profile.location}</p>
           <h1 id="hero-h">
             {[['I', 0], ['build', 0], ['complete', 1], ['web', 1], ['applications,', 1], ['from', 0], ['interface', 0], ['to', 0], ['database.', 0]].map(([w, g], i) => (
               <span key={i}>{i > 0 && ' '}<span className={g ? 'w grad' : 'w'} style={{ '--i': i }}>{w}</span></span>
             ))}
           </h1>
-          <p className="lead">I design responsive interfaces in React, write the server logic in Node.js and Express, and model the data in MySQL, so a project ships as one coherent, working product.</p>
+          <p className="lead">I design responsive interfaces in React, write the server logic in Node.js and Express, and model the data in SQL, so a project ships as one coherent, working product. Currently exploring agentic AI and RAG.</p>
           <div className="cta">
             <a className="btn btn-p" href="#projects">View My Projects</a>
             <a className="btn btn-o" href="#contact">Contact Me</a>
@@ -36,9 +36,9 @@ export function About() {
     <Section id="about" title="About me">
       <div className="two">
         <div className="prose">
-          <p>I'm {profile.name}, a Full-Stack Developer who enjoys working across the whole stack: shaping a responsive interface, writing the logic behind it, and designing the database it depends on.</p>
-          <p>My main tools are React on the frontend and Node.js with Express on the backend, backed by MySQL. I also work with Python and Django. I'm interested in turning real requirements into practical applications that are easy to use and easy to maintain.</p>
-          <p>My goal is to keep growing as an engineer, take on more complex products, and build software that people can rely on.</p>
+          <p>I'm {profile.name}, a self-taught Full-Stack Developer and mechanical engineering student at Addis Ababa University. I build complete products, from offline desktop systems to modern web storefronts.</p>
+          <p>I trained in full-stack development at Evangadi Networks, working with React, Node.js, Express and SQL, including authentication and REST APIs. I also earned honors in a University of Tokyo data science course, and I write Python fluently.</p>
+          <p>Right now I'm going deep on agentic AI and retrieval-augmented generation, and I want to keep shipping real software that solves practical problems.</p>
         </div>
         <ul className="panel">
           {[['Start from the problem', 'I clarify what needs solving before choosing tools.'], ['Write maintainable code', 'Small, reusable pieces that are easy to change later.'], ['Own the whole feature', 'From UI and API to the database and deployment.'], ['Keep learning', 'I treat each project as a chance to improve.']].map(([t, d]) => (
@@ -125,5 +125,35 @@ export function Marquee() {
         {[...items, ...items].map(([n, I], i) => <span key={i}><I />{n}</span>)}
       </div>
     </div>
+  );
+}
+
+export function Experience() {
+  return (
+    <Section id="experience" title="Experience & education" intro="The training, study and recognition behind the work.">
+      <div className="two ex">
+        <div className="stack">
+          {experience.map((e) => (
+            <article key={e.title} className="card">
+              <h3>{e.title}</h3>
+              <p className="org">{e.org}</p>
+              <ul className="list">{e.points.map((x) => <li key={x}>{x}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+        <div className="stack">
+          <article className="card">
+            <h3>Certifications & awards</h3>
+            {certifications.map(([t, o, d]) => (
+              <div key={t} className="cert"><strong>{t}</strong><p className="org">{o}</p><p>{d}</p></div>
+            ))}
+          </article>
+          <article className="card">
+            <h3>Currently learning</h3>
+            <ul className="chips dim">{learning.map((x) => <li key={x}>{x}</li>)}</ul>
+          </article>
+        </div>
+      </div>
+    </Section>
   );
 }

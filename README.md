@@ -12,7 +12,7 @@ npm run preview    # serve the build locally
 The contact form needs the Netlify function. To test it locally: `npx netlify-cli dev` (uses a `.env` copied from `.env.example`).
 
 ## Edit your content
-Everything personal is in `src/data.js`. Replace each `[PLACEHOLDER]` (email, GitHub, LinkedIn, name, projects). Until a link is real it renders as a disabled placeholder. Add a project by copying one object into the `projects` array. Put your CV at `public/cv/cv.pdf` and images in `public/images/`.
+Everything personal is in `src/data.js`. Replace each `[PLACEHOLDER]` (email, GitHub, LinkedIn, name, projects). Until a link is real it renders as a disabled placeholder. Add a project by copying one object into the `projects` array. Your CV is `public/cv/Elias_Takle_CV.pdf` (replace the file to update it). Images go in `public/images/`.
 
 ## Deploy to Netlify (primary)
 1. Push the repo to GitHub, then in Netlify choose Add new site > Import from Git. `netlify.toml` already sets the build command, `dist` and the functions folder.

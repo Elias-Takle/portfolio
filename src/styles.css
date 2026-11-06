@@ -211,3 +211,12 @@ a.xcard:hover{transform:translateX(6px);border-color:var(--ac);box-shadow:0 18px
 .xt em{font-style:normal;color:var(--mu);font-size:.88rem}
 .xa{position:relative;margin-left:auto;flex:none;color:var(--mu);transition:transform .5s,color .3s}
 a.xcard:hover .xa{transform:translateX(4px);color:var(--ac)}
+
+/* experience */
+.stack{display:grid;gap:20px;align-content:start}
+.ex{grid-template-columns:1fr 1fr}
+@media(max-width:860px){.ex{grid-template-columns:1fr}}
+.org{color:var(--ac)!important;font-weight:500;font-size:.92rem;margin:0 0 10px!important}
+.cert{padding:14px 0;border-top:1px solid var(--bd)}
+.cert:first-of-type{border-top:0;padding-top:0}
+.cert p{margin-bottom:6px}
